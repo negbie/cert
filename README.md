@@ -5,7 +5,9 @@ cert attempts to load a CA from the name-cert.pem and name-key.pem files. If thi
 ### Example
 
 ```bash
-ca := cert.NewCertificateAuthority("name")
+ca, err := cert.NewCertificateAuthority("name")
+if err == nil {
 &tls.Config{GetCertificate: ca.GetCertificate}
+}
 
 ```
