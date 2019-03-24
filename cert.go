@@ -64,7 +64,7 @@ type CertificateAuthority struct {
 }
 
 // NewCertificateAuthority returns a certificate authority.
-// First, we attempt to load a CA from the heplify-server-cert.pem and heplify-server-key.pem files.
+// First, we attempt to load a CA from the name-cert.pem and name-key.pem files.
 // If this does not succeed, we generate a new CA and save it to disk.
 func NewCertificateAuthority(name string) (*CertificateAuthority, error) {
 	ca, err := CertificateAuthorityFromFile(name)
